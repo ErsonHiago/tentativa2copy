@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Anúncio de Jogo Interativo</title>
+
+  <!-- Fonte com estilo de jogo pixelado -->
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background-color: #111;
+      font-family: 'Press Start 2P', sans-serif;
+    }
+
+    .game-ad {
+      position: relative;
+      width: 100%;
+      max-width: 480px;
+      margin: 20px auto;
+      cursor: pointer;
+      color: #fff;
+      border: 4px solid #444;
+      box-shadow: 0 0 20px rgba(255, 165, 0, 0.5);
+      border-radius: 8px;
+      overflow: hidden;
+      background-color: #000;
+    }
+
+    .game-ad .gameplay-gif {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    .game-ad:hover .gameplay-gif {
+      opacity: 0;
+      visibility: hidden;
+    }
+
+    .game-ad .static-text {
+      position: absolute;
+      top: 12px;
+      left: 12px;
+      right: 12px;
+      font-size: 0.5rem;
+      background: rgba(0, 0, 0, 0.7);
+      padding: 6px 10px;
+      border-radius: 5px;
+      z-index: 3;
+      text-align: center;
+    }
+
+    .game-ad .hover-overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      display: none;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      background: rgba(255, 140, 0, 0.85);
+      z-index: 2;
+      padding: 10px;
+    }
+
+    .game-ad:hover .hover-overlay {
+      display: flex;
+    }
+
+    .hover-overlay a.play-link {
+      text-decoration: none;
+    }
+
+    .hover-overlay img.play-button {
+      width: 100px;
+      height: 100px;
+      margin-bottom: 12px;
+      transition: transform 0.2s ease;
+    }
+
+    .hover-overlay img.play-button:hover {
+      transform: scale(1.15);
+    }
+
+    .hover-overlay .hover-text p,
+    .hover-overlay .hover-text span {
+      font-size: 0.45rem;
+      background: rgba(0, 0, 0, 0.75);
+      padding: 6px 10px;
+      border-radius: 4px;
+      margin: 4px 0;
+      text-align: center;
+    }
+
+    @media (max-width: 400px) {
+      .game-ad .static-text {
+        font-size: 0.4rem;
+        padding: 4px 8px;
+      }
+
+      .hover-overlay img.play-button {
+        width: 80px;
+        height: 80px;
+      }
+
+      .hover-overlay .hover-text p,
+      .hover-overlay .hover-text span {
+        font-size: 0.4rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="game-ad">
+    <img src="https://storage.googleapis.com/ag-crm/2025-CRM-AG/GIFs/street%20fighter%20GIF.gif" alt="Gameplay" class="gameplay-gif">
+
+    <div class="static-text">🔥 Detone no jogo e ganhe prêmios</div>
+
+    <div class="hover-overlay">
+      <a href="https://apostaganha.bet.br/auth/login?loginRedirect=%2Fconta%2Fpromocoes%2Fpromocoes" target="_blank" class="play-link">
+        <img src="https://storage.googleapis.com/ag-crm/2025-CRM-AG/Imgs/parte-frontal-player-de-video-com-fundo-branco.jpg" alt="Play" class="play-button">
+      </a>
+
+      <div class="hover-text">
+        <span>Jogue pra caralho e gaste seu dinheiro inteiro</span>
+        <p>Aperte play nessa bagaça</p>
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>
